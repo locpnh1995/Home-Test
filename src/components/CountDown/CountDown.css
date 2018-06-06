@@ -1,3 +1,8 @@
+html,
+body {
+  overflow: hidden;
+}
+
 #root {
   overflow: hidden;
 }
@@ -49,7 +54,7 @@
   font-size: 35px;
 }
 
-.bg-video {
+#bg-video {
   position: absolute;
   top: 0;
   z-index: -99;
