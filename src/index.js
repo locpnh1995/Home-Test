@@ -1,6 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
-import Hello from "./Hello";
+import { BrowserRouter, Route } from "react-router-dom";
+import Home from "./components/Home";
+import CountDown from "./components/CountDown";
+import Slider from "./components/Slider";
 
 const styles = {
   fontFamily: "sans-serif",
@@ -8,10 +11,13 @@ const styles = {
 };
 
 const App = () => (
-  <div style={styles}>
-    <Hello name="Loc Pham" />
-    <h2>Start editing to see some magic happen {"\u2728"}</h2>
-  </div>
+  <BrowserRouter>
+    <div className="full-height">
+      <Route exact path="/" component={Home} />
+      <Route path="/count-down" component={CountDown} />
+      <Route path="/slider" component={Slider} />
+    </div>
+  </BrowserRouter>
 );
 
 render(<App />, document.getElementById("root"));
