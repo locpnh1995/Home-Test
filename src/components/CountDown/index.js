@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import "./CountDown.css";
+import CountDownColumn from "./CountDownColumn";
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
@@ -69,6 +70,7 @@ class CountDown extends React.Component {
         milisecondRemain -= 1000;
       }, 1000);
 
+      document.getElementById("count-down").style.backgroundImage = "none";
       this.setState({ isCounted: true });
     } else {
       //target date is blank
@@ -104,9 +106,18 @@ class CountDown extends React.Component {
   }
   render() {
     return (
-      <section className="count-down">
+      <section id="count-down">
         {this.state.isCounted ? (
           <section className="center-section count-down-timmer">
+            <div class="bg-video">
+              <iframe
+                frameBorder="0"
+                height="100%"
+                width="100%"
+                allow="autoplay"
+                src="https://youtube.com/embed/4EoUz39nPMM?autoplay=1&controls=0&showinfo=0&autohide=1"
+              />
+            </div>
             <center>
               <h1 className="countdown-heading">
                 Counting to
@@ -116,36 +127,31 @@ class CountDown extends React.Component {
               </h1>
               <h1 className="countdown-heading">Comming Soon ...</h1>
               <div className="countdown-row">
-                <div>
-                  <div className="countdown-col">
-                    <div id="daysRemain" className="countdown-number">
-                      0
-                    </div>
-                    <div className="countdown-label">days</div>
-                  </div>
-                  <div className="countdown-col">
-                    <div id="hoursRemain" className="countdown-number">
-                      0
-                    </div>
-                    <div className="countdown-label">hours</div>
-                  </div>
-                  <div className="countdown-col">
-                    <div id="minutesRemain" className="countdown-number">
-                      0
-                    </div>
-                    <div className="countdown-label">minutes</div>
-                  </div>
-                  <div className="countdown-col">
-                    <div id="secondsRemain" className="countdown-number">
-                      0
-                    </div>
-                    <div className="countdown-label">seconds</div>
-                  </div>
-                </div>
+                <CountDownColumn
+                  countDownId="daysRemain"
+                  countDownValue="0"
+                  countDownLabel="days"
+                />
+                <CountDownColumn
+                  countDownId="hoursRemain"
+                  countDownValue="0"
+                  countDownLabel="hours"
+                />
+                <CountDownColumn
+                  countDownId="minutesRemain"
+                  countDownValue="0"
+                  countDownLabel="minutes"
+                />
+                <CountDownColumn
+                  countDownId="secondsRemain"
+                  countDownValue="0"
+                  countDownLabel="seconds"
+                />
               </div>
             </center>
           </section>
         ) : (
+          // </section>
           <section className="center-section count-down-input">
             <center>
               <h1 className="countdown-heading">

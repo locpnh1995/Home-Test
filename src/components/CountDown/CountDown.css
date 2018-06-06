@@ -12,7 +12,7 @@
   font-size: 25px;
 }
 
-.count-down {
+#count-down {
   height: 100%;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/44/4k-wallpapers-0.jpg");
   background-position: center;
@@ -47,4 +47,13 @@
 
 .countdown-heading {
   font-size: 35px;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  z-index: -99;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
