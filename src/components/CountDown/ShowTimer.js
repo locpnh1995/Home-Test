@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import TimerDisplayColumn from "./TimerDisplayColumn";
+// import setVideoFullScreen from "../../utils/VideoUtils";
 
 const MONTH_NAMES = [
   "January",
