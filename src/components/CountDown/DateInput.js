@@ -76,11 +76,12 @@ class DateInput extends React.Component {
     let secondsRemain = Math.floor(
       (((milisecondRemain % DAY) % HOUR) % MINUTE) / SECOND
     );
-
-    document.getElementById("daysRemain").innerHTML = daysRemain;
-    document.getElementById("hoursRemain").innerHTML = hoursRemain;
-    document.getElementById("minutesRemain").innerHTML = minutesRemain;
-    document.getElementById("secondsRemain").innerHTML = secondsRemain;
+    if (document.getElementById("daysRemain")) {
+      document.getElementById("daysRemain").innerHTML = daysRemain;
+      document.getElementById("hoursRemain").innerHTML = hoursRemain;
+      document.getElementById("minutesRemain").innerHTML = minutesRemain;
+      document.getElementById("secondsRemain").innerHTML = secondsRemain;
+    }
 
     // console.log(
     //   `${daysRemain} days ${hoursRemain} hours ${minutesRemain} minutes ${secondsRemain} seconds`
