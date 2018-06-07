@@ -21,7 +21,7 @@ class Home extends React.Component {
       <main>
         <div id="bg-video">
           <iframe
-            src="https://www.youtube.com/embed/dk9uNWPP7EA?rel=0&autoplay=1&controls=0&showinfo=0&autohide=1&loop=1&playlist=dk9uNWPP7EA"
+            src="https://www.youtube.com/embed/dk9uNWPP7EA?rel=0&autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&playlist=dk9uNWPP7EA"
             frameBorder="0"
             allow="autoplay; encrypted-media"
             width="100%"
