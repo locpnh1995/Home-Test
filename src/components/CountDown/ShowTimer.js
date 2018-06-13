@@ -57,22 +57,22 @@ class ShowTimer extends React.Component {
           <div className="countdown-row">
             <TimerDisplayColumn
               countDownId="daysRemain"
-              countDownValue="0"
+              countDownValue={this.props.currentCountDownRemain.daysRemain}
               countDownLabel="days"
             />
             <TimerDisplayColumn
               countDownId="hoursRemain"
-              countDownValue="0"
+              countDownValue={this.props.currentCountDownRemain.hoursRemain}
               countDownLabel="hours"
             />
             <TimerDisplayColumn
               countDownId="minutesRemain"
-              countDownValue="0"
+              countDownValue={this.props.currentCountDownRemain.minutesRemain}
               countDownLabel="minutes"
             />
             <TimerDisplayColumn
               countDownId="secondsRemain"
-              countDownValue="0"
+              countDownValue={this.props.currentCountDownRemain.secondsRemain}
               countDownLabel="seconds"
             />
           </div>

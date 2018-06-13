@@ -77,10 +77,12 @@ class DateInput extends React.Component {
       (((milisecondRemain % DAY) % HOUR) % MINUTE) / SECOND
     );
     if (document.getElementById("daysRemain")) {
-      document.getElementById("daysRemain").innerHTML = daysRemain;
-      document.getElementById("hoursRemain").innerHTML = hoursRemain;
-      document.getElementById("minutesRemain").innerHTML = minutesRemain;
-      document.getElementById("secondsRemain").innerHTML = secondsRemain;
+      this.props.changeStateCurrentCountDownRemain({
+        daysRemain: daysRemain,
+        hoursRemain: hoursRemain,
+        minutesRemain: minutesRemain,
+        secondsRemain: secondsRemain
+      });
     }
 
     // console.log(
